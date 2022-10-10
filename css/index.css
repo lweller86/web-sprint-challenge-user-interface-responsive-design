@@ -18,7 +18,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
+	/*border: 0;*/
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -49,6 +49,7 @@ table {
 
 * {
     box-sizing: border-box;
+
 }
 
 html {
@@ -56,11 +57,16 @@ html {
     min-width: 428px;
     width: 100%;
     font-size: 62.5%;
+    background-color:rgb(0, 4, 17);
+
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
+    margin-left: 5%;
+    margin-right: 5%;
+    color:rgb(225, 239, 230);
 }
 
 h1, h2, h3, h4, h5, h6, p, a, i {
@@ -78,6 +84,17 @@ h2 {
 h3 {
     font-size: 5rem;
 }
+a {
+    color: white;
+    text-decoration: none;
+}
+
+
+a:hover {
+    color:red; 
+    text-decoration:none; 
+    cursor:pointer;  
+}
 
 p, a {
     font-size: 3rem;
@@ -92,6 +109,32 @@ header {
     background-position: center;
     background-repeat: no-repeat;
 }
+.navbar { 
+    background-color:rgb(0, 4, 17, .8);
+    filter: alpha(opacity=90);
+    -moz-opacity: 0.80;
+    -khtml-opacity: 0.8;
+    opacity: .8
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+header nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+.media-tags{
+    display: flex;
+    justify-content:center;
+    font-size: 35px;
+}
+header i{
+    padding-left: 5%;
+    padding-bottom:3%;
+    padding-top:3%;
+}
 
 /* spacers */
 .spacer {
@@ -104,6 +147,13 @@ header {
     height: 10vh;
     background-color: rgb(0, 4, 17);
 }
+ .gallery h2{
+    padding-top: 3vh;
+    padding-bottom: 2vh;
+    color: #fff;
+    text-align: center;
+    
+}
 
 /* gallery section */
 .gallery {
@@ -111,6 +161,21 @@ header {
     height: 100vh;
     text-align: center;
     background-color: rgb(0, 4, 17);
+}
+
+.foods{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    flex-flow: wrap;    
+}
+.foods img {
+    margin-bottom: 3%;
+}
+.spacer{
+    height:214.39px;
+    width:100%;
+ 
 }
 
 /* about us section */
@@ -135,10 +200,12 @@ header {
 
 .about h2 {
     width: 100%;
+    color: #fff;
 }
 
 .about-container .text {
     width: 50%;
+   
 }
 
 /* contact us section */
@@ -150,6 +217,7 @@ header {
     background-repeat: no-repeat;
     background-color: rgb(0, 4, 17);
 }
+
 
 .contact-container {
     width: 100%;
@@ -187,6 +255,10 @@ header {
 .contacts {
     width: 25%;
 }
+.spacer-sm{
+    height:214.39px;
+    width:100%;
+}
 
 /* footer section */
 footer {
@@ -194,9 +266,134 @@ footer {
     height: 15vh;
     padding-top: 2.5vh;
     font-size: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+.form-box input{
+    font-size:24px;
+    color: black;
+    padding: 1px 1px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+}
+.form-box button{
+    font-size: 24px;
 }
 
+footer .box {
+    width:40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer .navb{
+    width:70%;
+    display: flex;
+    flex-direction: column;  
+}
+footer nav{
+    display: flex;
+    justify-content: space-between;
+}
+footer p{
+    font-size: 20px;
+    padding-top:3%;
+    padding-right:7%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+
+
 /* mobile media query */
+
+@media (max-width:1628px){
+    .gallery {
+        width: 100%;
+        height:130vh;
+        text-align: center;    
+    }
+    body {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+@media (max-width:1200px){
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width:1145px){
+    .info {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media (max-width:1090px){
+
+    .about {
+        height: 100vh;
+}
+}
+
+@media (max-width:980px){
+    
+.address {
+    width: 50%;
+}
+
+.hours {
+    width: 50%;
+   
+}
+
+.contacts {
+    width: 50%;
+}
+@media (max-width:900px){
+    footer nav{
+    flex-direction: column;
+    align-items: center;
+    }
+}
+
+
+@media (max-width:876px){
+    .gallery {
+        height:235vh;
+        
+    }
+}
+
+}
+@media (max-width:816px){ 
+    .about {
+        height: 125vh;
+}
+.about-container .text {
+    width: 90%;
+}  
+}
+
+
+@media (max-width:650px){
+    header nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
 @media (max-width: 428px) {
     /* header section */
     
@@ -249,5 +446,13 @@ footer {
         height: auto;
         padding-top: 2.5vh;
         font-size: 2rem;
+    }
+    .form-box button{
+        font-size: 24px;
+        width: 100%;
+    }
+    footer p{
+        font-size: smaller;
+       text-align: center;
     }
 }

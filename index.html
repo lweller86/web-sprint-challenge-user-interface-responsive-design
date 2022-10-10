@@ -4,50 +4,60 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>Sprint Challenge - Home</title>
-
+	<link rel="stylesheet" href="css/index.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Rubik" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/5b12ffad4b.js" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/b3ff72f4b2.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 	<div>
 		<!-- header -->
 		<header>
-			<div>
-				BLOOMTECH BAR AND GRILL
-
+			<div class="navbar">
+				<h1>BLOOMTECH BAR AND GRILL</h1>	
 				<!-- nav -->
-				Menu
-				Reservations
-				Special Offers
-				Contact
+				<nav>
+				<a href="http://127.0.0.1:5500/menu.html#menu">Menu</a>
+				<a href="#reservations">Reservations</a>
+				<a href="#specials">Special Offers</a>
+				<a href="#contact">Contact</a>
+				</nav>
+				<div class="media-tags">
+					<i class="fa-brands fa-square-facebook"></i>
+					<i class="fa-brands fa-square-twitter"></i>
+					<i class="fa-brands fa-square-instagram"></i>
+				</div>	
 			</div>
 		</header>
 
 		<!-- gallery section -->
 		<section class="gallery">
-			<div>
+			<div class="food">
 				<h2>OUR FOOD</h2>
+					<container class="foods"/>
 
-				img/food-avocadotoast.jpg
+						<img src="img/food-avocadotoast.jpg" alt="avacado, tomato, and mozzerella toast on a plate.">
 
-				img/food-burger.jpg
+						<img src="img/food-burger.jpg" alt="burger on a plate with a plate of soup in front of it. hand holding glass of alcohal to the left of the soup">
 
-				img/food-poutine.jpg
+						<img src="img/food-poutine.jpg" alt="poutin in a square skillet on a table">
 
-				img/food-ribs.jpg
+						<img src="img/food-ribs.jpg" alt="close up of ribs on a plate with garnishes">
 
-				img/food-sandwich.jpg
+						<img src="img/food-sandwich.jpg" alt="half of chicken salad sandwich">
 
-				img/food-sausage.jpg
+						<img src="img/food-sausage.jpg" alt="sausage in a roll">
 
-				img/food-steak.jpg
+						<img src="img/food-steak.jpg" alt="t-bone steak on a square plate with garnishes">
 
-				img/food-tacos.jpg
+						<img src="img/food-tacos.jpg" alt="three soft tacos on a bar top, with beer glasses on the bar behind it">
 
-				img/food-wings.jpg
+						<img src="img/food-wings.jpg" alt="chicken wings on a rectangular plate with cucumber and dipping sause. orange soda pictured next to the plate.">
+					</container>
+					
 			</div>
 		</section>
 
@@ -124,16 +134,23 @@
 
 		<!-- footer -->
 		<footer>
-			<!-- email signup -->
-			Join our mailing list!
-			Sign Up
-			<!-- nav -->
-			Menu
-			Reservations
-			Special Offers
-			Contact
-			<!-- copyright -->
-			©2022 BloomTech Restaurant Group, Inc. All Rights Reserved.
+			<div class="box"><h4>Join our mailing list!</h4>
+				<form action="#">
+					<div class="form-box">
+						<input type="text"name="EmailAddress" placeholder="Email Address">
+						<button type="submit">Sign Up</button>
+					</div>
+				</form>
+			</div>
+			<div class="navb" >
+				<nav>
+					<a href="#menu">Menu</a>
+					<a href="#reservations">Reservations</a>
+					<a href="#specials">Special Offers</a>
+					<a href="#contact">Contact</a>
+				</nav>	
+					<p>©2022 BloomTech Restaurant Group, Inc. All Rights Reserved.</p>
+			</div>
 		</footer>
 	</div>
 </body>
